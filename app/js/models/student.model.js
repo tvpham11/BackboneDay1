@@ -4,6 +4,8 @@ var Student = Backbone.Model.extend({
     this.logName();
   },
 
+  idAttribute: '_id',
+
   defaults: {
     name: '',
     location: 'Atlanta'

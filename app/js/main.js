@@ -14,6 +14,14 @@ students.forEach(function(studentName) {
 
 var allStudents = new StudentCollection();
 
+allStudents.fetch().done(function() {
+
+  allStudents.each(function(model) {
+    addStudentToView(model.attributes);
+  });
+
+});
+
 var addStudent = function(e) {
   e.preventDefault();
 
