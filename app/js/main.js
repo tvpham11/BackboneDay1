@@ -5,6 +5,8 @@
 
   allStudents.fetch().done(function() {
 
+    new app.Views.MainView();
+
     // allStudents.each(function(model) {
     //   addStudentToView(model.attributes);
     // });
@@ -34,7 +36,7 @@
     //     studentHtml += student.name;
     //     studentHtml += "</li>";
 
-    var studentHtml = template.student(x);
+    var studentHtml = hbs.student(x);
 
     $('#students').prepend(studentHtml);
   };

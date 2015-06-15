@@ -6,12 +6,17 @@
 
     el: '.container',
 
+    template: hbs.student, // Handlebars
+
     initialize: function() {
       this.render();
     },
 
     render: function() {
-      this.$el.html('I am cool');
+
+      var renderedHtml = this.template({ name: 'Tim', location: 'Florida' });
+
+      this.$el.find('#students').html(renderedHtml);
       // $el = $(.container) - jQuerified element
     }
 
