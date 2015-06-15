@@ -12,9 +12,9 @@ this["template"]["student"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.
 
   return "<li id=\""
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
-    + "\">"
+    + "\">\n  "
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + " is from "
+    + " from <a href=\"#\">"
     + alias3(((helper = (helper = helpers.location || (depth0 != null ? depth0.location : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"location","hash":{},"data":data}) : helper)))
-    + "</li>\n";
+    + "</a> and is really cool!\n</li>\n";
 },"useData":true});

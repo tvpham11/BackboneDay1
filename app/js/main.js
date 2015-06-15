@@ -40,15 +40,17 @@ var addStudent = function(e) {
 
 };
 
-var addStudentToView = function(student) {
-  var studentHtml = "<li id='" + student._id + "'>";
-      studentHtml += student.name;
-      studentHtml += "</li>";
+var addStudentToView = function(x) {
+  // var studentHtml = "<li id='" + student._id + "'>";
+  //     studentHtml += student.name;
+  //     studentHtml += "</li>";
+
+  var studentHtml = template.student(x);
 
   $('#students').prepend(studentHtml);
 };
 
 
-// From Submit Listener
+// Submit Handler
 $('#addStudent').on('submit', addStudent);
 
