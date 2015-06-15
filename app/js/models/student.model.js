@@ -1,29 +1,35 @@
-var Student = Backbone.Model.extend({
+;(function () {
 
-  initialize: function() {
-    this.logName();
-  },
+  'use strict';
 
-  idAttribute: '_id',
+  app.Models.Student = Backbone.Model.extend({
 
-  defaults: {
-    name: '',
-    location: 'Atlanta'
-  },
+    initialize: function() {
+      // this.logName();
+    },
 
-  logName: function() {
-    console.log(this.get('name'));
-    this.logLocale();
-  },
+    idAttribute: '_id',
 
-  logLocale: function() {
-    console.log(this.get('location'));
-  },
+    defaults: {
+      name: '',
+      location: 'Atlanta'
+    },
 
-  changeLocation: function(newLocation) {
-    this.set('location', newLocation);
-    console.log(this.get('name') + ' has a new location of ' +
-                this.get('location') + '.');
-  }
+    logName: function() {
+      console.log(this.get('name'));
+      this.logLocale();
+    },
 
-});
+    logLocale: function() {
+      console.log(this.get('location'));
+    },
+
+    changeLocation: function(newLocation) {
+      this.set('location', newLocation);
+      console.log(this.get('name') + ' has a new location of ' +
+                  this.get('location') + '.');
+    }
+
+  });
+
+}());

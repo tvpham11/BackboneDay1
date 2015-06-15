@@ -1,56 +1,46 @@
-/*var students = ['Justin', 'James', 'Jack', 'Max'];
+;(function() {
+  'use strict';
 
-var allStudents = new StudentCollection();
+  var allStudents = new app.Collections.StudentCollection();
 
-students.forEach(function(studentName) {
+  allStudents.fetch().done(function() {
 
-  var s = new Student({
-    name: studentName
+    // allStudents.each(function(model) {
+    //   addStudentToView(model.attributes);
+    // });
+
   });
 
-  allStudents.add(s);
+ /* var addStudent = function(e) {
+    e.preventDefault();
 
-});*/
+    var studentName = $(this).find('input').val();
 
-var allStudents = new StudentCollection();
+    var s = new app.Models.Student({
+      name: studentName
+    });
 
-allStudents.fetch().done(function() {
+    allStudents.add(s).save().success(function(data) {
+      console.log(data);
+      addStudentToView(data);
+    });
 
-  allStudents.each(function(model) {
-    addStudentToView(model.attributes);
-  });
+    this.reset(); // Reset form
 
-});
+  };
 
-var addStudent = function(e) {
-  e.preventDefault();
+  var addStudentToView = function(x) {
+    // var studentHtml = "<li id='" + student._id + "'>";
+    //     studentHtml += student.name;
+    //     studentHtml += "</li>";
 
-  var studentName = $(this).find('input').val();
+    var studentHtml = template.student(x);
 
-  var s = new Student({
-    name: studentName
-  });
-
-  allStudents.add(s).save().success(function(data) {
-    console.log(data);
-    addStudentToView(data);
-  });
-
-  this.reset(); // Reset form
-
-};
-
-var addStudentToView = function(x) {
-  // var studentHtml = "<li id='" + student._id + "'>";
-  //     studentHtml += student.name;
-  //     studentHtml += "</li>";
-
-  var studentHtml = template.student(x);
-
-  $('#students').prepend(studentHtml);
-};
+    $('#students').prepend(studentHtml);
+  };
 
 
-// Submit Handler
-$('#addStudent').on('submit', addStudent);
-
+  // Submit Handler
+  $('#addStudent').on('submit', addStudent);
+*/
+}());
