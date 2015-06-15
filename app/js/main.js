@@ -5,7 +5,9 @@
 
   allStudents.fetch().done(function() {
 
-    new app.Views.MainView();
+    new app.Views.MainView({
+      collection: allStudents
+    });
 
     // allStudents.each(function(model) {
     //   addStudentToView(model.attributes);
